@@ -1,0 +1,16 @@
+.options__group__container {
+}
+
+.options__group__list {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+.options__group__list li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.options__group__list li:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,60 @@
+.application__search__container {
+    border-bottom-color: #E2E1E1;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    padding: 10px 0 10px 40px;
+}
+
+.search__application__input {
+    margin: 10px 0 10px 5px;
+    border-style: none;
+    background-color: #EFF0F2;
+    border-radius: 30px;
+    padding: 13px 0 13px 15px;
+    min-width: 90%;
+}
+
+.search__application__input::placeholder {
+    color: rgba(0,0,0, 0.2)
+}
+
+.app__table__container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    max-height: 65vh;
+    overflow: scroll;
+}
+
+.app__table__container table {
+    text-align: left;
+    width: 95%;
+    border-collapse: collapse;
+}
+
+.app__table__container thead tr {
+    background-color: #E2E1E1;
+}
+
+.app__table__container thead tr th {
+    padding: 20px 10px 20px 10px;
+}
+
+.app__table__container tbody tr {
+    font-weight: 500;
+}
+
+.app__table__container tbody tr:nth-of-type(even) {
+    background-color: #eeeeee;
+}
+
+.app__table__container tbody tr td {
+    padding: 20px 10px 20px 10px;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.app__table__container tbody tr, .app__table__container thead tr {
+    height: 70px;
+    min-height: 70px;
+}

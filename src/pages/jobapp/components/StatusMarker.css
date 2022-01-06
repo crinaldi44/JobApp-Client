@@ -1,0 +1,7 @@
+.status__marker__container {
+    border-radius: 30px;
+    color: var(--content-pane);
+    font-weight: 600;
+    padding: 10px 15px 10px 15px;
+    font-size: 12px;
+}

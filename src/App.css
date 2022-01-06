@@ -1,0 +1,70 @@
+
+/* CONFIGURATION */
+
+/* RESETS */
+* {
+  margin: 0;
+  padding: 0;
+  color: var(--primary-text);
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 12px;
+} 
+
+a {
+  text-decoration: none;
+}
+
+/* COLORS */
+
+:root {
+  --secondary-color: #51629D;
+  --nav-panel: #333333;
+  --content-pane: #ffffff;
+  --primary-text: #474747;
+  --light-red: #E48C86;
+  --light-green: #88E486;
+  --light-yellow: #EBE07A;
+}
+
+[data-color*="red"] {
+  background-color: var(--light-red);
+}
+
+[data-color*="green"] {
+  background-color: var(--light-green);
+}
+
+[data-color*="yellow"] {
+  background-color: var(--light-yellow);
+}
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  flex: 4;
+  background-color: var(--content-pane);
+}
