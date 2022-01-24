@@ -1,7 +1,7 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
-import {Tooltip} from "@mui/material";
+import {Tooltip, Snackbar, Alert} from "@mui/material";
 
 /**
  * The Header component is a banner that displays the name of the current screen as well as some toolbar options in the far
@@ -9,6 +9,31 @@ import {Tooltip} from "@mui/material";
  * @returns {JSX.Element}
  */
 const Header = (props) => {
+
+    /**
+     * Represents whether the alert trigger is open. Intended
+     * for temporary use.
+     */
+    const [alertOpen, setalertOpen] = useState(false);
+
+    /**
+     * Handles action taken when the button is clicked.
+     */
+    const openAlert = () => {
+        setalertOpen(true)
+    }
+
+    /**
+     * Handles the action taken when the snackbar closes.
+     * @param {*} event 
+     * @param {*} reason 
+     */
+    const handleCloseAlert = (event, reason) => {
+        if (reason === 'clickaway') return;
+
+        setalertOpen(false);
+    }
+
     return (
         <div className='header__container'>
             <div className='header__title__section'>
@@ -22,12 +47,24 @@ const Header = (props) => {
                     <Link to="/applications"><li><i class="fas fa-search"></i></li></Link>
                 </Tooltip>
                 <Tooltip title={'Toggle dark mode'}>
-                    <li><i class="fas fa-moon"></i></li>
+                    <li><i onClick={openAlert} class="fas fa-moon"></i></li>
                 </Tooltip>
                 <Tooltip title={'Logout'}>
-                    <li><i class="fa fa-arrow-left" aria-hidden="true"></i></li>
+                    <li><i onClick={openAlert} class="fa fa-arrow-left" aria-hidden="true"></i></li>
                 </Tooltip>
                 <li><span className='profile__icon'>CR</span></li>
+
+                <Snackbar 
+                    open={alertOpen}
+                    autoHideDuration={2000}
+                    message="This feature is coming soon!"
+                    onClose={handleCloseAlert}>
+
+                    <Alert severity='info'>
+                        This feature is currently unavailable.
+                    </Alert>
+
+                </Snackbar>
             </ul>
         </div>
     )
