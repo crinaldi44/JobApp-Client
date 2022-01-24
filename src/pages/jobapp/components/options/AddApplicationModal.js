@@ -64,7 +64,9 @@ export const AddApplicationModal = (props) => {
             .then(setOpen(false)).then(props.handler())
             .catch(error => {
                 console.error(error)
-                setOpen(false)})
+                setOpen(false)}).then(
+                    setApplication({})
+                )
     }
 
     /**
