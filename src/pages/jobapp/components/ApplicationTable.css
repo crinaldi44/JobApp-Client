@@ -11,7 +11,7 @@
     background-color: #EFF0F2;
     border-radius: 30px;
     padding: 13px 0 13px 15px;
-    min-width: 90%;
+    min-width: 80%;
 }
 
 .search__application__input::placeholder {

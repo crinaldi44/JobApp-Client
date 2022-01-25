@@ -67,4 +67,5 @@ a {
 .content {
   flex: 4;
   background-color: var(--content-pane);
+  width: 100vw;
 }
