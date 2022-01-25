@@ -7,10 +7,10 @@ import './JobApplicationScreen.css'
  * Represents the Job Applications Screen.
  * @returns 
  */
-const JobApplicationScreen = () => {
+const JobApplicationScreen = (props) => {
     return (
         <div className='job__app__container'>
-            <Header title="Job Applications"/>
+            <Header title="Job Applications" navToggle={props.navToggle}/>
             <ApplicationTable/>
         </div>
     )

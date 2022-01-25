@@ -6,10 +6,10 @@ import './Home.css'
  * Represents the component displayed when launching the application.
  * @returns {JSX.Element}
  */
-const Home = () => {
+const Home = (props) => {
     return (
         <div className='home__container'>
-            <Header title="Dashboard"/>
+            <Header title="Dashboard" navToggle={props.navToggle}/>
         </div>
     )
 }

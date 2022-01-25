@@ -4,14 +4,24 @@ import { Link, useLocation } from 'react-router-dom'
 
 /**
  * Represents a navigation panel.
+ * @param props takes prop visible, represents whether it is visible
  * @returns {JSX.Element}
  */
-const NavigationPanel = () => {
+const NavigationPanel = (props) => {
 
+    /**
+     * Represents the current pathname.
+     */
     const loc = useLocation()
 
+    /**
+     * Stylesheet object that stores the state of the showNav
+     * prop.
+     */
+    const visibility = {display: props.showNav ? 'block' : 'none'}
+
     return (
-        <div className='navigation__container'>
+        <div className='navigation__container' style={visibility}>
             <div className='branding'>
                 <i class="fas fa-paper-plane"></i>
                 <div className='branding__logo'>

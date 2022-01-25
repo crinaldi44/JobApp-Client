@@ -39,7 +39,7 @@ const Header = (props) => {
         <div className='header__container'>
             <div className='header__title__section'>
                 <Tooltip title={'Toggle navigation panel'}>
-                    <i className='fa fa-bars'></i>
+                    <i style={{cursor: 'pointer'}} onClick={props.navToggle} className='fa fa-bars'></i>
                 </Tooltip>
                 <h1>{props.title}</h1>
             </div>
