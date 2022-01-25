@@ -14,7 +14,7 @@ const StatusMarker = (props) => {
     }
 
     return (
-        <span className='status__marker__container' data-color={possibleColors[props.text]}>
+        <span className='status__marker__container' data-color={possibleColors[props.text] || "red"}>
             {props.text}
         </span>
     )

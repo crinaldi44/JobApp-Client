@@ -20,7 +20,7 @@ const OptionsGroup = (props) => {
      * Handles action taken when the user marks an item as accepted.
      */
     const handleMarkAccepted = async () => {
-        await axios.patch(`http://localhost:3000/api/applications/${props.app.id}`, {
+        await axios.patch(`${process.env.REACT_APP_PRODUCTION_ADDRESS}/${props.app.id}`, {
             status: 'ACCEPTED'
         }).then(props.rerender()).catch(error => console.error(error))
     }
@@ -29,7 +29,7 @@ const OptionsGroup = (props) => {
      * Handles action taken when the user marks an item as rejected.
      */
     const handleDeleteApp = async () => {
-        await axios.delete(`http://localhost:3000/api/applications/${props.app.id}`)
+        await axios.delete(`${process.env.REACT_APP_PRODUCTION_ADDRESS}/${props.app.id}`)
             .then(props.rerender())
             .catch(error => console.error(error))
     }

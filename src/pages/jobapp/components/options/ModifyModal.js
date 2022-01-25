@@ -55,7 +55,7 @@ export const ModifyModal = (props) => {
      * of this component matches, simply closes the modal so as to avoid crowding with unnecessary requests.
      */
     const handleConfirm = async () => {
-        await axios.patch(`http://localhost:3000/api/applications/${application.id}`, application)
+        await axios.patch(`${process.env.REACT_APP_PRODUCTION_ADDRESS}/${application.id}`, application)
             .then(setOpen(false)).then(props.handler())
             .catch(error => { console.error(error) })
     }

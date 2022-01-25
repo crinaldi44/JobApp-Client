@@ -60,10 +60,11 @@ export const AddApplicationModal = (props) => {
      * of this component matches, simply closes the modal so as to avoid crowding with unnecessary requests.
      */
     const handleConfirm = async () => {
-        await axios.post(`http://localhost:3000/api/applications/`, application)
+        await axios.post(`${process.env.REACT_APP_PRODUCTION_ADDRESS}`, application)
             .then(setOpen(false)).then(props.handler())
             .catch(error => {
                 console.error(error)
+                console.log(`address: ${process.env.REACT_APP_PRODUCTION_ADDRESS}`)
                 setOpen(false)}).then(
                     setApplication({})
                 )

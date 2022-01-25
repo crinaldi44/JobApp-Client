@@ -29,7 +29,7 @@ const ApplicationTable = () => {
     }
 
     async function getData() {
-        const response = await axios.get('http://localhost:3000/api/applications')
+        const response = await axios.get(process.env.REACT_APP_PRODUCTION_ADDRESS)
             .catch(error => {console.error(error)})
         const data = await response.data
         setApplications(data)
