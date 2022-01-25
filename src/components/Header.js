@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
 import {Tooltip, Snackbar, Alert} from "@mui/material";
+import InfoSnackbar from './InfoSnackbar';
 
 /**
  * The Header component is a banner that displays the name of the current screen as well as some toolbar options in the far
@@ -54,17 +55,10 @@ const Header = (props) => {
                 </Tooltip>
                 <li><span className='profile__icon'>CR</span></li>
 
-                <Snackbar 
+                <InfoSnackbar 
                     open={alertOpen}
-                    autoHideDuration={2000}
-                    message="This feature is coming soon!"
-                    onClose={handleCloseAlert}>
-
-                    <Alert severity='info'>
-                        This feature is currently unavailable.
-                    </Alert>
-
-                </Snackbar>
+                    info="This feature is currently unavailable!"
+                    closeHandler={handleCloseAlert}/>
             </ul>
         </div>
     )

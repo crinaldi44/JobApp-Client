@@ -6,13 +6,16 @@ import {AlertTitle, Alert, Snackbar} from "@mui/material";
  * left corner of the interface without interrupting user activity. Alerts are
  * associated with varying severity and generally can be toggled with a button.
  * @returns {JSX.Element}
- * @param props: props.texts represents the text, props.severity represents the severity
+ * @param props: props.info represents the text, props.severity represents the severity
  * @see https://mui.com/components/alert/
  */
 const InfoSnackbar = (props) => {
-  return <Snackbar autoHideDuration={6000}>
-            <Alert severity={props.severity}>
-                {props.text}
+  return <Snackbar 
+            autoHideDuration={2000}
+            open={props.open}
+            onClose={props.closeHandler}>
+            <Alert severity='info'>
+                {props.info}
             </Alert>
         </Snackbar>;
 };
