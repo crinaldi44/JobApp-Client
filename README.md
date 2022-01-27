@@ -1,4 +1,4 @@
-# Welcome to JobApp - Packaged with CreateReactApp!
+# Welcome to JobApp
 
 
 ## Description
