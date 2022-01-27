@@ -1,6 +1,32 @@
-# Getting Started with Create React App
+# Welcome to JobApp - Packaged with CreateReactApp!
 
+
+## Description
+I've had the most fun so far developing this project. This is a progressive web app type solution that allows a user to
+track their job applications! This thereby eliminates hours of laborious email sorting in addition to increasing
+user productivity. 
+
+## How it works
+
+### The Frontend
+The frontend is a React.js application that utilizes Axios' asynchronous library to make several types of requests against
+the backend. While a majority of the skeleton and brains of the app I've designed myself in CSS, I utilized a few components 
+from the library React-MUI to simulate a "modern, Google app" based experience.
+
+### The Backend
+The backend is written in Node.js and utilizes Express, Sequelize, CORS/body-parser and more! This connects to a cloud-based
+instance of PostgreSQL. When a CRUD operation is submitted to the server via HTTP request, the server makes use of Nodemailer's
+SMTP services to automatically send an email directly to my gmail account! 
+
+The ultimate plan is to expand the backend capability, spread into microservices and enable functionality by incorporating
+long-polling techniques to my Gmail account to monitor applications for any changes. This will allow me to fully automate the
+process of managing my applications!
+
+
+## CRA BoilerPlate
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+If you need some assistance getting the project running, I've included the create-react-app boilerplate below.
 
 ## Available Scripts
 
