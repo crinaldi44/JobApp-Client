@@ -53,7 +53,7 @@ const Header = (props) => {
                 <Tooltip title={'Logout'}>
                     <li><i onClick={openAlert} class="fa fa-arrow-left" aria-hidden="true"></i></li>
                 </Tooltip>
-                <li><span className='profile__icon'>CR</span></li>
+                <li id="profile"><span className='profile__icon'>CR</span></li>
 
                 <InfoSnackbar 
                     open={alertOpen}

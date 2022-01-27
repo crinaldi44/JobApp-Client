@@ -46,9 +46,19 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 500px) {
+    .header__title__section h1 {
+        font-size: 7vw;
+    }
+}
+
 @media screen and (max-width: 800px) {
 
-    .header__toolbar li:last-of-type {
+    .header__toolbar li {
         display: none;
+    }
+
+    .header__toolbar #profile {
+        display: block;
     }
 }
