@@ -23,7 +23,7 @@ long-polling techniques to my Gmail account to monitor applications for any chan
 process of managing my applications!
 
 *Due to security reasons, the backend code is kept private as sensitive information is stored on the live preview repo. If
-*you would like to view the code, however, please feel free to contact me and I will be happy to share it!
+you would like to view the code, however, please feel free to contact me and I will be happy to share it!
 
 
 ## CRA BoilerPlate
