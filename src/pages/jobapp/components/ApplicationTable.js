@@ -23,7 +23,7 @@ const ApplicationTable = () => {
      * we will display a "loading" component to compensate for
      * any latency between the server response time.
      */
-    const [loaded, setLoaded] = useState(true)
+    const [loaded, setLoaded] = useState(false)
 
     /**
      * Forces the component to re-render and retrieve the data. Waits 300ms before executing request for data
@@ -50,7 +50,7 @@ const ApplicationTable = () => {
      * Retrieve the data from the server.
      */
     useEffect(() => {
-        getData()
+        getData().then(setLoaded(true))
     }, [])
 
     /**
