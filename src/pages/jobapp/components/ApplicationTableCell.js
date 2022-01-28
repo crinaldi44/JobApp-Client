@@ -13,7 +13,7 @@ const ApplicationTableCell = (props) => {
             <td>{props.application.business_name}</td>
             <td data-label="responsive">{props.application.business_description}</td>
             <td>{props.application.role_type}</td>
-            <td id='status'><StatusMarker text={props.application.status.trim()}/></td>
+            <td id='status'><StatusMarker text={props.application.status}/></td>
             <td data-label="responsive">{props.application.createdAt.substring(0,10)}</td>
             <td><OptionsGroup app={props.application} rerender={props.rerender}/></td>
         </tr>
