@@ -62,7 +62,7 @@ const ApplicationTable = () => {
     }
 
     return (
-        <>
+        <div style={{flexGrow: 1, overflow: 'auto'}}>
             <div className='application__search__container'>
                 <h2>Search application</h2>
                 <div>
@@ -102,7 +102,7 @@ const ApplicationTable = () => {
                 </tbody>
             </table>
         </div>
-            </>
+            </div>
     )
 }
 
