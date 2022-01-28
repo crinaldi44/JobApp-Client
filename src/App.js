@@ -29,7 +29,7 @@ function App() {
   return (
     <div className="App">
         <Router>
-        <NavigationPanel showNav={navVisible}/>
+        <NavigationPanel showNav={navVisible} navToggle={toggleNav}/>
         <div className='content'>
           <Routes>
             <Route path='/' exact element={<Home navToggle={toggleNav}/>}/>

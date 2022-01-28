@@ -2,6 +2,7 @@
     flex: 1;
     min-width: 200px;
     background-color: var(--nav-panel);
+    transition: ease-in-out 200ms;
 }
 
 .branding {
@@ -18,7 +19,7 @@
     color: white;
 }
 
-.branding i {
+.branding i:not(#close__btn) {
     color: var(--secondary-color);
     background-color: white;
     width: 45px;
@@ -27,6 +28,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#close__btn {
+    display: none;
 }
 
 .nav__panel {
@@ -70,5 +75,34 @@
     } to {
         transform: scaleX(1);
         flex: 1;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .navigation__container {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .navigation__container {
+        position: absolute;
+        height: 100vh;
+        width: 70vw;
+    }
+
+    #close__btn {
+        display: block;
+        margin-left: 80%;
+        margin-top: 10%;
+        margin-bottom: auto;
+        transition: all ease-in-out 200ms;
+        font-size: 25px;
+    }
+
+    #close__btn:hover {
+        color: #e9e9e9;
+        transition: all ease-in-out 200ms;
+        cursor: pointer;
     }
 }
