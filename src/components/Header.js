@@ -39,7 +39,7 @@ const Header = (props) => {
         <div className='header__container'>
             <div className='header__title__section'>
                 <Tooltip title={'Toggle navigation panel'}>
-                    <i className='fa fa-bars'></i>
+                    <i style={{cursor: 'pointer', fontSize: '20px'}} onClick={props.navToggle} className='fa fa-bars'></i>
                 </Tooltip>
                 <h1>{props.title}</h1>
             </div>
@@ -53,7 +53,7 @@ const Header = (props) => {
                 <Tooltip title={'Logout'}>
                     <li><i onClick={openAlert} class="fa fa-arrow-left" aria-hidden="true"></i></li>
                 </Tooltip>
-                <li><span className='profile__icon'>CR</span></li>
+                <li id="profile"><span className='profile__icon'>CR</span></li>
 
                 <InfoSnackbar 
                     open={alertOpen}

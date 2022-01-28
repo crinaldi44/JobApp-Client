@@ -5,10 +5,10 @@ import Header from '../../components/Header'
  * Represents the settings UI display.
  * @returns {JSX.Element}
  */
-const Settings = () => {
+const Settings = (props) => {
     return (
         <div>
-            <Header title='Settings'/>
+            <Header title='Settings' navToggle={props.navToggle}/>
         </div>
     )
 }
