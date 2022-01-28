@@ -1,4 +1,4 @@
-import { CircularProgress } from '@mui/material';
+import { CircularProgress, Box } from '@mui/material';
 import React from 'react';
 
 /**
@@ -9,10 +9,14 @@ import React from 'react';
  */
 const LoadingBar = () => {
 
-  return <>
-        <CircularProgress/>
-  </>;
-  
+
+  return (
+    <tr>
+      <td colSpan='6' style={{backgroundColor: 'rgba(0,0,50, 0.05)', height: '20vh', textAlign: 'center'}}>
+          <CircularProgress/>
+        </td>
+      </tr>
+        )
 };
 
 /**

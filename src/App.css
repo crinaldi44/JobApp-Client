@@ -69,3 +69,10 @@ a {
   background-color: var(--content-pane);
   width: 100vw;
 }
+
+/* Responsive Hiding - Declare with data-label=responsive */
+@media screen and (max-width: 800px) {
+  [data-label*="responsive"] {
+      display: none;
+  }
+}
