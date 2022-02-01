@@ -50,7 +50,9 @@ const ApplicationTable = () => {
      * Retrieve the data from the server.
      */
     useEffect(() => {
-        getData().then(setLoaded(true))
+        getData().then(setTimeout(() => {
+            setLoaded(true)
+        }, 500))
     }, [])
 
     /**
