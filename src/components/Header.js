@@ -1,8 +1,9 @@
 import React, {useState} from 'react'
 import './Header.css'
 import {Link} from 'react-router-dom'
-import {Tooltip, Snackbar, Alert} from "@mui/material";
+import {Tooltip, IconButton, Avatar} from "@mui/material";
 import InfoSnackbar from './InfoSnackbar';
+import ProfileAvatar from './ProfileAvatar';
 
 /**
  * The Header component is a banner that displays the name of the current screen as well as some toolbar options in the far
@@ -53,7 +54,9 @@ const Header = (props) => {
                 <Tooltip title={'Logout'}>
                     <li><i onClick={openAlert} class="fa fa-arrow-left" aria-hidden="true"></i></li>
                 </Tooltip>
-                <li id="profile"><span className='profile__icon'>CR</span></li>
+                <li id="profile">
+                    <ProfileAvatar/>
+                </li>
 
                 <InfoSnackbar 
                     open={alertOpen}
