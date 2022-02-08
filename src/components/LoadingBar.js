@@ -1,5 +1,6 @@
-import { CircularProgress, Box } from '@mui/material';
+import { CircularProgress } from '@mui/material';
 import React from 'react';
+import useWindowDimensions from './WindowDimensions';
 
 /**
  * The LoadingBar displays a circular progress bar while blurring
@@ -9,11 +10,13 @@ import React from 'react';
  */
 const LoadingBar = () => {
 
+  const { width, height } = useWindowDimensions()
 
   return (
     <tr>
-      <td colSpan='6' style={{backgroundColor: 'rgba(0,0,50, 0.05)', height: '20vh', textAlign: 'center'}}>
+      <td colSpan={width < '800' ? 4 : 6} style={{backgroundColor: 'rgba(0,0,50, 0.05)', height: '20vh', textAlign: 'center'}}>
           <CircularProgress/>
+          <p style={{fontSize: '14px'}}>Loading...</p>
         </td>
       </tr>
         )

@@ -14,7 +14,7 @@ const ApplicationTable = () => {
     /**
      * Represents the applications as an array of JSON objects.
      */
-    const [applications, setApplications] = useState([])
+    const [applications, setApplications] = useState(null)
 
     const [applicationsOrig, setApplicationsOrig] = useState([])
 
@@ -50,9 +50,7 @@ const ApplicationTable = () => {
      * Retrieve the data from the server.
      */
     useEffect(() => {
-        getData().then(setTimeout(() => {
-            setLoaded(true)
-        }, 500))
+        getData()
     }, [])
 
     /**
@@ -93,7 +91,7 @@ const ApplicationTable = () => {
                 </thead>
                 <tbody>
                 {
-                !loaded ? (<LoadingBar/>) : applications.map(app => (
+                !applications ? (<LoadingBar/>) : applications.map(app => (
                     <ApplicationTableCell
                         application={app}
                         rerender={forceRerender}
